@@ -3,8 +3,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
  module.exports = {
    entry: {
+    mode: 'development',
      index: './src/index.js',
      print: './src/print.js',
+   },
+   devServer: {
+     static: './dist',
    },
   plugins: [
     new HtmlWebpackPlugin({
@@ -23,5 +27,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
           use: ['style-loader', 'css-loader'],
         },
       ],
+    },
+    optimization: {
+      runtimeChunk: 'single',
     },
  };
