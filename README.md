@@ -1,1 +1,3 @@
-# webpack_setup
+# Webpack setup
+
+Learn web pack setup steps
